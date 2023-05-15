@@ -432,16 +432,16 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="https://formsubmit.co/fb63fae965523265faa4aeaaba13774c" method="POST" class="contact-form">
+                        <form onsubmit="sendEmail(); reset(); return false;" class="contact-form">
                             <div class="input-control i-c-2">
-                                <input type="text" name="name" required placeholder="Your Name">
-                                <input type="email" name="email" required placeholder="Your Email">
+                                <input type="text" id="name" required placeholder="Your Name">
+                                <input type="email" id="email" required placeholder="Your Email">
                             </div>
                             <div class="input-control">
-                                <input type="text" name="subject" required placeholder="Enter Subject">
+                                <input type="text" id="subject" required placeholder="Enter Subject">
                             </div>
                             <div class="input-control">
-                                <textarea name="" name="message" cols="15" rows="8" placeholder="Enter your message"></textarea>
+                                <textarea name="" id="message" cols="15" rows="8" required placeholder="Enter your message"></textarea>
                             </div>
                             <button class="submit-btn">
                                 <span class="btn-text">Send</span>
@@ -452,16 +452,16 @@
                     <script>
                         function sendEmail(){
                             Email.send({
-                                Host : "smtp.elasticemail.com",
-                                Username : "eddiesze08973@gmail.com",
-                                Password : "95BE831AA192918C2F24BC827061A3577CD4",
-                                To : 'eddiesze08973@gmail.com',
-                                From : document.getElementById("email").value,
-                                Subject : document.getElementById("subject").value,
-                                Body : document.getElementById("message").value
-                            }).then(
-                            message => alert("Message Sent Successfully")
-                            );
+                            Host : "smtp.elasticemail.com",
+                            Username : "eddiesze08973@gmail.com",
+                            Password : "95BE831AA192918C2F24BC827061A3577CD4",
+                            To : "esak9721@gmail.com",
+                            From : document.getElementById("email").value,
+                            Subject : document.getElementById("subject").value,
+                            Body : document.getElementById("message").value
+                        }).then(
+                        message => alert(message)
+                        );
                         }
                     </script>
                 </div>
