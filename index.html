@@ -455,12 +455,14 @@
                             Host : "smtp.elasticemail.com",
                             Username : "eddiesze08973@gmail.com",
                             Password : "95BE831AA192918C2F24BC827061A3577CD4",
-                            To : "esak9721@gmail.com",
-                            From : document.getElementById("email").value,
+                            To : "eddiesze08973@gmail.com",
+                            From : "eddiesze08973@gmail.com",
                             Subject : document.getElementById("subject").value,
-                            Body : document.getElementById("message").value
+                            Body : "Name: " + document.getElementById("name").value 
+                                + "<br> Email: " + document.getElementById("email").value
+                                + "<br> Message: <br>" + document.getElementById("message").value
                         }).then(
-                        message => alert("Message sent successfully!")
+                        message => alert("Message Sent Successfully!")
                         );
                         }
                     </script>
